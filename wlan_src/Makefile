@@ -590,6 +590,12 @@ install: default
 	echo $(INSTALLDIR)
 	echo "usb8997 Driver Installed"
 
+modules_install:
+	mkdir -p $(INSTALLDIR)
+	cp -f mlan.$(MODEXT) $(INSTALLDIR)/mlan$(DBG).$(MODEXT)
+	cp -f usb8xxx.$(MODEXT) $(INSTALLDIR)/usb8997$(DBG).$(MODEXT)
+
+
 distclean:
 	-find . -name "*.o" -exec rm {} \;
 	-find . -name "*.orig" -exec rm {} \;
