@@ -56,10 +56,10 @@ CONFIG_STA_SUPPORT=y
 CONFIG_UAP_SUPPORT=y
 
 # Enable WIFIDIRECT support
-CONFIG_WIFI_DIRECT_SUPPORT=y
+CONFIG_WIFI_DIRECT_SUPPORT=n
 
 # Enable WIFIDISPLAY support
-CONFIG_WIFI_DISPLAY_SUPPORT=y
+CONFIG_WIFI_DISPLAY_SUPPORT=n
 
 # Re-association in driver
 CONFIG_REASSOCIATION=y
@@ -76,10 +76,10 @@ CONFIG_BIG_ENDIAN=n
 
 
 # Enable driver based authenticator
-CONFIG_DRV_EMBEDDED_AUTHENTICATOR=y
+CONFIG_DRV_EMBEDDED_AUTHENTICATOR=n
 
 # Enable driver based supplicant
-CONFIG_DRV_EMBEDDED_SUPPLICANT=y
+CONFIG_DRV_EMBEDDED_SUPPLICANT=n
 
 ifeq ($(CONFIG_DRV_EMBEDDED_SUPPLICANT), y)
 CONFIG_EMBEDDED_SUPP_AUTH=y
@@ -120,7 +120,7 @@ ccflags-y += -I$(M)/mlan/esa/common
 endif
 
 
-KERNELDIR ?= /media/rob/a72581e8-3ca3-4dc1-b3b8-6db5464de098/Miku/kernel_96b_4.14/kernel
+KERNELDIR ?= /media/rob/a72581e8-3ca3-4dc1-b3b8-6db5464de098/qc_36900/build/tmp-glibc/work-shared/dragonboard-410c/kernel-source
 LD += -S
 
 INSTALLDIR=./build
